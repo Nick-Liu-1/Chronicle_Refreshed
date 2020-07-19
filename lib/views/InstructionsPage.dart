@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:ChronicleAR/ARScanner.dart';
-import 'CapturePage.dart';
+
 
 class InstructionPage extends StatelessWidget {
 
@@ -107,11 +106,8 @@ class InstructionPage extends StatelessWidget {
           floatingActionButton: FloatingActionButton.extended(
 
             onPressed: () {
-              // Add your onPressed code here!
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => ARScanner()),
-              );
+
+              Navigator.pushNamed(context,'');
             },
 
             label: Text('Start Scanning',

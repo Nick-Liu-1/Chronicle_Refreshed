@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({
-    Key key,
-  }) : super(key: key);
-  @override
-  _HomePageState createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
@@ -21,94 +13,93 @@ class _HomePageState extends State<HomePage> {
         child: Container(
 
           child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
 
-              children: <Widget>[
-                Container(
+            children: <Widget>[
+              Container(
 
-                  child: Text('chronicleAR',
-                    style: TextStyle(
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                        fontFamily: 'CircularStd',
-                        letterSpacing: 5.0,
-                        color: Color(0xFFFFC107),
-                      )),
-
-                  alignment: Alignment(1.0, 0.0),
-                  padding: EdgeInsets.only(right: 7)
-
-                ),
-
-                Container(
-
-                  child: Text('explore the unknown',
-                    style: TextStyle(
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
+                child: Text('chronicleAR',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
                       fontFamily: 'CircularStd',
-                      letterSpacing: 4.0,
-                      color: Color(0xFFFFFFFF),
-                    )),
-
-                  alignment: Alignment(1.0, 1.0),
-                  padding: EdgeInsets.only(right: 7)),
-
-                Container(
-                  child: CustomPaint(
-                  size: Size(400, 100),
-                  painter: MyPainter(),
-                )),
-
-                Container(
-                  child: CustomPaint(
-                  size: Size(400, 100),
-                  painter: MyPainter2(),
-                )),
-
-                const SizedBox(height: 10), RaisedButton(
-
-                  color: Colors.blue[900],
-
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                          CapturePage(camera: widget.camera)),
-                    );
-                  },
-
-                  child: Text("Start Scanning",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'CircularStd',
-                      letterSpacing: 2.0,
+                      letterSpacing: 5.0,
                       color: Color(0xFFFFC107),
                     )),
 
+                alignment: Alignment(1.0, 0.0),
+                padding: EdgeInsets.only(right: 7)
+
+              ),
+
+              Container(
+
+                child: Text('explore the unknown',
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'CircularStd',
+                    letterSpacing: 4.0,
+                    color: Color(0xFFFFFFFF),
+                  )),
+
+                alignment: Alignment(1.0, 1.0),
+                padding: EdgeInsets.only(right: 7)),
+
+              Container(
+                child: CustomPaint(
+                size: Size(400, 100),
+                painter: MyPainter(),
+              )),
+
+              Container(
+                child: CustomPaint(
+                size: Size(400, 100),
+                painter: MyPainter2(),
+              )),
+
+              const SizedBox(height: 10), RaisedButton(
+
+                color: Colors.blue[900],
+
+                onPressed: () {
+                  Navigator.pushNamed(context, '');
+                },
+
+                child: Text("Start Scanning",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'CircularStd',
+                    letterSpacing: 2.0,
+                    color: Color(0xFFFFC107),
+                  )),
+
+              ),
+
+              const SizedBox(height: 10), RaisedButton(
+
+                color: Colors.blue[50],
+
+                onPressed: () {
+                  Navigator.pushNamed(context, '/instructions');
+                },
+
+                child: Text("Instructions",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'CircularStd',
+                    letterSpacing: 4.3,
+                    color: Color(0xFFFFC107),
+                  )
                 ),
 
-                const SizedBox(height: 10),
-                RaisedButton(
-                  color: Colors.blue[50],
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Instruction()),
-                    );
-                  },
-                  child: Text("Instructions",
-                      style: TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: 'CircularStd',
-                        letterSpacing: 4.3,
-                        color: Color(0xFFFFC107),
-                      )),
-                )
-              ]),
+              )
+
+            ]
+
+          ),
         ),
       ),
     );
