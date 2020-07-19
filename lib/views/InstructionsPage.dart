@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:ChronicleAR/ARScanner.dart';
 import 'CapturePage.dart';
 
-class Instruction extends StatelessWidget {
+class InstructionPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {

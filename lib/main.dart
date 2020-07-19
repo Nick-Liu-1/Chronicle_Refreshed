@@ -4,6 +4,8 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 import './GraphGLConfiguration.dart';
 import './services/api.services.dart';
 
+import './views/InstructionsPage.dart';
+
 GraphQLConfiguration graphQLConfiguration = GraphQLConfiguration();
 
 void main() => runApp(
@@ -23,6 +25,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: HomePage(title: 'Flutter Demo Home Page'),
+
     );
   }
 }
@@ -46,6 +49,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Column(
         children: <Widget>[
+
           Query(
             options: QueryOptions(
               documentNode: gql(GET_BOOK),
