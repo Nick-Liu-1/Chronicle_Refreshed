@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
                 color: Colors.blue[900],
 
                 onPressed: () {
-                  Navigator.pushNamed(context, '');
+                  Navigator.pushNamed(context, '/camera');
                 },
 
                 child: Text("Start Scanning",
