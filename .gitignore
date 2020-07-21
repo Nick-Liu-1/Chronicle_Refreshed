@@ -53,6 +53,7 @@ app.*.map.json
 .history
 .svn/
 config.js
+APIKey.json
 
 # IntelliJ related
 *.iml
